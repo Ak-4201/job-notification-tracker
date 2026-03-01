@@ -58,6 +58,90 @@ body.app-body {
   gap: var(--space-3);
 }
 
+/* App navigation */
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-2);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color-subtle);
+  background-color: #f9f8f5;
+}
+
+.app-nav__items {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.app-nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) 0;
+  font-size: 14px;
+  text-decoration: none;
+  color: rgba(17, 17, 17, 0.8);
+  transition: color var(--transition-fast);
+}
+
+.app-nav__link:hover {
+  color: var(--color-text);
+}
+
+.app-nav__link--active {
+  color: var(--color-text);
+}
+
+.app-nav__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.app-nav__toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  padding: var(--space-1);
+  cursor: pointer;
+}
+
+.app-nav__toggle-bar {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--color-text);
+}
+
+.app-nav__toggle-bar::before,
+.app-nav__toggle-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--color-text);
+}
+
+.app-nav__toggle-bar::before {
+  top: -6px;
+}
+
+.app-nav__toggle-bar::after {
+  top: 6px;
+}
+
 /* Top bar */
 
 .top-bar {
@@ -159,6 +243,24 @@ body.app-body {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+}
+
+/* Route placeholder */
+
+.route-placeholder {
+  max-width: 720px;
+}
+
+.route-placeholder__title {
+  margin: 0 0 var(--space-1) 0;
+  font-family: var(--font-serif);
+  font-size: 28px;
+}
+
+.route-placeholder__subtitle {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(17, 17, 17, 0.8);
 }
 
 /* Cards */
@@ -541,6 +643,35 @@ body.app-body {
 
   .context-header {
     padding: var(--space-2);
+  }
+
+   .app-nav {
+    flex-wrap: wrap;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .app-nav__toggle {
+    display: inline-flex;
+  }
+
+  .app-nav__items {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    border-top: 1px solid var(--border-color-subtle);
+    margin-top: var(--space-1);
+    padding-top: var(--space-1);
+  }
+
+  .app-nav--open .app-nav__items {
+    display: flex;
+  }
+
+  .app-nav__link {
+    width: 100%;
+    padding: var(--space-1) 0;
   }
 }
 
