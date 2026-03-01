@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Job Notification App – Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="layout-shell">
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <div class="top-bar__section top-bar__section--left">
+          <span class="app-name">Job Notification App</span>
+        </div>
+        <div class="top-bar__section top-bar__section--center">
+          <span class="progress-indicator">Step 1 / 4</span>
+        </div>
+        <div class="top-bar__section top-bar__section--right">
+          <span class="status-badge status-badge--idle">Not Started</span>
+        </div>
+      </header>
+
+      <!-- Context Header -->
+      <section class="context-header">
+        <div class="context-header__content">
+          <h1 class="context-header__title">
+            Establish the Job Notification design foundation
+          </h1>
+          <p class="context-header__subtitle">
+            Define consistent layout, typography, color and interaction rules that every screen of the Job Notification App will follow.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Workspace -->
+      <main class="workspace">
+        <!-- Primary Workspace (70%) -->
+        <section class="workspace__primary">
+          <div class="card card--primary">
+            <header class="card__header">
+              <h2 class="card__title">Core layout & surfaces</h2>
+              <p class="card__subtitle">
+                Base structure that all future product flows will reuse.
+              </p>
+            </header>
+            <div class="card__body">
+              <div class="layout-preview">
+                <div class="layout-preview__top-bar">
+                  <span class="layout-preview__label">Top Bar</span>
+                </div>
+                <div class="layout-preview__content">
+                  <div class="layout-preview__primary">
+                    <span class="layout-preview__label">Primary Workspace</span>
+                  </div>
+                  <div class="layout-preview__secondary">
+                    <span class="layout-preview__label">Secondary Panel</span>
+                  </div>
+                </div>
+                <div class="layout-preview__footer">
+                  <span class="layout-preview__label">Proof Footer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <header class="card__header">
+              <h2 class="card__title">Interactive components</h2>
+              <p class="card__subtitle">
+                Buttons, inputs and feedback states styled for calm, confident usage.
+              </p>
+            </header>
+            <div class="card__body card__body--stacked">
+              <div class="form-row">
+                <label class="field">
+                  <span class="field__label">Sample input</span>
+                  <input
+                    class="field__control"
+                    type="text"
+                    placeholder="Enter a concise label"
+                  />
+                  <span class="field__hint">
+                    Clear labels and steady spacing support scanning.
+                  </span>
+                </label>
+              </div>
+
+              <div class="button-row">
+                <button class="btn btn--primary" type="button">
+                  Primary action
+                </button>
+                <button class="btn btn--secondary" type="button">
+                  Secondary action
+                </button>
+                <button class="btn btn--ghost" type="button">
+                  Quiet tertiary
+                </button>
+              </div>
+
+              <div class="feedback-row">
+                <div class="alert alert--success">
+                  <div class="alert__title">Configuration saved</div>
+                  <div class="alert__body">
+                    The current layout and component tokens have been stored.
+                    You can safely iterate on content next.
+                  </div>
+                </div>
+                <div class="alert alert--warning">
+                  <div class="alert__title">Missing decisions</div>
+                  <div class="alert__body">
+                    Define copy patterns and validation messages before wiring
+                    full product flows.
+                  </div>
+                </div>
+                <div class="alert alert--error">
+                  <div class="alert__title">Unable to apply changes</div>
+                  <div class="alert__body">
+                    Something went wrong while saving the style changes. Review
+                    the token values and try again. If the issue persists,
+                    contact your system administrator.
+                  </div>
+                </div>
+                <div class="empty-state">
+                  <div class="empty-state__title">
+                    No variants defined yet
+                  </div>
+                  <div class="empty-state__body">
+                    Start by documenting one primary layout and one default
+                    button style. You can introduce additional variants only
+                    when a real product need appears.
+                  </div>
+                  <div class="empty-state__actions">
+                    <button class="btn btn--primary" type="button">
+                      Define first variant
+                    </button>
+                    <button class="btn btn--secondary" type="button">
+                      View design principles
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Secondary Panel (30%) -->
+        <aside class="workspace__secondary">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h2 class="card__title">Step guidance</h2>
+              <p class="card__subtitle">
+                Align every new screen with this design system before building features.
+              </p>
+            </header>
+            <div class="card__body card__body--stacked">
+              <ol class="step-list">
+                <li class="step-list__item">
+                  Map your screen to the global layout:
+                  top bar, context header, workspace and proof footer.
+                </li>
+                <li class="step-list__item">
+                  Choose buttons and inputs strictly from this system.
+                </li>
+                <li class="step-list__item">
+                  Define empty, loading and error states before wiring logic.
+                </li>
+              </ol>
+
+              <div class="prompt-block">
+                <div class="prompt-block__header">
+                  <span class="prompt-block__title">Copyable prompt</span>
+                  <button
+                    class="btn btn--secondary btn--sm"
+                    type="button"
+                    data-copy-target="#design-prompt"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <textarea
+                  id="design-prompt"
+                  class="prompt-block__body"
+                  readonly
+                >Use the Job Notification App design system. Keep the global layout (Top Bar → Context Header → Primary Workspace + Secondary Panel → Proof Footer). Reuse existing button, card and input styles. Do not introduce new colors, shadows or spacing values.</textarea>
+              </div>
+
+              <div class="secondary-actions">
+                <button class="btn btn--primary" type="button">
+                  Mark design step complete
+                </button>
+                <button class="btn btn--secondary" type="button">
+                  View token reference
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <!-- Proof Footer -->
+      <footer class="proof-footer">
+        <div class="proof-footer__inner">
+          <span class="proof-footer__label">Proof checklist</span>
+          <div class="proof-footer__items">
+            <label class="check-item">
+              <input type="checkbox" disabled />
+              <span>UI Built</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" disabled />
+              <span>Logic Working</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" disabled />
+              <span>Test Passed</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" disabled />
+              <span>Deployed</span>
+            </label>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const buttons = document.querySelectorAll("[data-copy-target]");
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const targetSelector = button.getAttribute("data-copy-target");
+            const target = document.querySelector(targetSelector);
+            if (!target) return;
+            target.select();
+            try {
+              document.execCommand("copy");
+            } catch (e) {
+              // Silently ignore; this is non-critical for layout.
+            }
+            target.setSelectionRange(0, 0);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
+

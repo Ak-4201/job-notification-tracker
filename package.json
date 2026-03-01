@@ -1,0 +1,17 @@
+{
+  "name": "job-notification-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design system foundation for a premium Job Notification App (layout, tokens, and base components only).",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "devDependencies": {},
+  "keywords": [
+    "design-system",
+    "job-notification",
+    "saas",
+    "layout"
+  ]
+}
+
